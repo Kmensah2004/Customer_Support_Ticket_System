@@ -53,3 +53,9 @@ async function fetchUnresolvedTickets() {
             errors.textContent = error.message;
             console.error('Error:', error.message);
         }
+        // Task #4: Use finally to Ensure Cleanup
+        finally {
+                   if (ticketContainer.innerHTML === 'Loading tickets...') {
+                       ticketContainer.innerHTML = 'No tickets to display.';
+                   }
+               } }
